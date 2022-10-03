@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,22 +9,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-<form action="/form.php" method="post" class="container bg-light border rounded p-5">
+
+
+<form action="/thanks.php" method="post" class="container bg-light border rounded p-5">
     <h1 class="text-center">Votre formulaire</h1>
 
     <p class="row">
         <label for="lastName" class="form-label">Nom : </label>
-        <input type="text" name="lastName" id="lastName" class="form-control">
+        <input type="text" name="lastName" id="lastName" class="form-control" required="required">
     </p>
 
     <p class="row">
         <label for="firstName" class="form-label">Prénom : </label>
-        <input type="text" name="firstName" id="firstName" class="form-control">
+        <input type="text" name="firstName" id="firstName" class="form-control" required="required">
     </p>
 
     <p class="row">
         <label for="email" class="form-label">Email : </label>
-        <input type="mail" name="email" id="email" class="form-control">
+        <input type="mail" name="email" id="email" class="form-control" required="required">
     </p>
 
     <p class="row">
@@ -33,7 +36,7 @@
 
     <p class="row">
         <label for="subject" class="form-label">Sujet : </label>
-        <select name="subject" id="subject">
+        <select name="subject" id="subject" required="required">
             <option value="">Votre choix</option>
             <option value="On en a gros">On en a gros !</option>
             <option value="Le gras c'est la vie">Le gras c'est la vie !</option>
@@ -43,7 +46,7 @@
 
     <p class="row">
         <label for="message" class="form-label">Message : </label>
-        <textarea id="message" name="message" rows="5" cols="33">Votre message</textarea>
+        <textarea id="message" name="message" rows="5" cols="33" required="required">Votre message</textarea>
     </p>
 
     <p class="text-center">
