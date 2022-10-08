@@ -1,7 +1,14 @@
 <?php
 
-$errors = [];
+$firstName = $_POST['firstName'];
+$lastName = $_POST['lastName'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
 
+$errors = [];
+var_dump($_POST);
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     // nettoyage et validation des données soumises via le formulaire
     if(empty($_POST['firstName']) || trim($_POST['firstName']) === ''){
@@ -26,6 +33,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <?php // Affichage des éventuelles erreurs
+
 if (count($errors) > 0) : ?>
     <div class="border border-danger rounded p-3 m-5 bg-danger">
         <ul>
@@ -49,12 +57,13 @@ if (count($errors) > 0) : ?>
 <body>
 <main class="container">
     <div class="text-center border rounded p-3 m-5">
+        
         <h2>Vous êtes inscrit !</h2>
-        <p>Merci <?= $_POST["firstName"] . " " .  $_POST["lastName"] ?> de nous avoir contacté à propos de " <?= $_POST["subject"] ?>".
+        <p>Merci <?= $firstName ?> <?= $lastName ?> de nous avoir contacté à propos de " <?= $subject ?>".
 
-            Un de nos conseiller vous contactera soit à l’adresse <?= $_POST["email"] ?> ou par téléphone au <?= $_POST["phone"] ?> dans les plus brefs délais pour traiter votre demande :
+            Un de nos conseillers vous contactera soit à l’adresse <?= $email ?> ou par téléphone au <?= $phone ?> dans les plus brefs délais pour traiter votre demande :
 
-            <?= $_POST['message'] ?>.</p>
+            <?= $message ?>.</p>
     </div>
 </main>
 </body>

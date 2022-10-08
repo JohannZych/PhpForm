@@ -11,7 +11,7 @@
 <body>
 
 
-<form action="/thanks.php" method="post" class="container bg-light border rounded p-5">
+<form action="/thanks.php" method="POST" class="container bg-light border rounded p-5">
     <h1 class="text-center">Votre formulaire</h1>
 
     <p class="row">
